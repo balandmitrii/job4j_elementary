@@ -7,10 +7,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 class CounterTest {
 
     @Test
-    void whenSumStart5AndFinish20Than189() {
-        int start = 2;
+    void whenSumStart5AndFinish20Than200() {
+        int start = 5;
         int finish = 20;
-        int expected = 189;
+        int expected = 200;
         int output = Counter.sum(start, finish);
         assertThat(output).isEqualTo(expected);
     }
@@ -25,10 +25,10 @@ class CounterTest {
     }
 
     @Test
-    void whenSumStartMinus12AndFinishMinus4ThanMinus68() {
+    void whenSumStartMinus12AndFinishMinus4ThanMinus72() {
         int start = -12;
         int finish = -4;
-        int expected = -68;
+        int expected = -72;
         int output = Counter.sum(start, finish);
         assertThat(output).isEqualTo(expected);
     }
