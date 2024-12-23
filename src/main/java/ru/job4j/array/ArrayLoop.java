@@ -6,8 +6,8 @@ public class ArrayLoop {
         for (int i = 0, j = numbers.length; i < j; i++) {
             numbers[i] = i * 2 + 3;
         }
-        for (int i = 0, j = numbers.length; i < j; i++) {
-            System.out.println("Значение массива numbers с индексом[" + i + "]: " + numbers[i]);
+        for (int number : numbers) {
+            System.out.println("Значение текущего элемента массива: " + number);
         }
     }
 }
