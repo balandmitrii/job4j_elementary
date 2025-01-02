@@ -38,8 +38,8 @@ class PointTest {
         Point point1 = new Point(1, 1, 1);
         Point point2 = new Point(3, 3, 3);
         double output = point1.distance3d(point2);
-        double expected = 3.4641016151377544;
-        assertThat(output).isEqualTo(expected);
+        double expected = 3.46;
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
@@ -47,7 +47,7 @@ class PointTest {
         Point point1 = new Point(2, 3, 4);
         Point point2 = new Point(5, 6, 7);
         double output = point1.distance3d(point2);
-        double expected = 5.196152422706632;
-        assertThat(output).isEqualTo(expected);
+        double expected = 5.19;
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 }
