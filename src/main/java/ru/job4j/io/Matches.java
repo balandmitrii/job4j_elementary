@@ -16,10 +16,10 @@ public class Matches {
                 System.out.println("Введено неверное число. Число не должно "
                         + "быть меньше 1 и не должно превышать число "
                         + Math.min(3, count));
-                continue;
+            } else {
+                count -= matches;
+                turn = !turn;
             }
-            count -= matches;
-            turn = !turn;
         }
         if (!turn) {
             System.out.println("Выиграл первый игрок");
