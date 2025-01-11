@@ -1,5 +1,6 @@
 package ru.job4j.ex;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -19,4 +20,12 @@ class FactorialTest {
         );
     }
 
+    @Test
+    @DisplayName("Успешный поиск факториала для 6")
+    void when6than120() throws RuntimeException {
+        int input = 6;
+        int expected = 120;
+        int result = new Factorial().calc(input);
+        assertThat(result).isEqualTo(expected);
+    }
 }
