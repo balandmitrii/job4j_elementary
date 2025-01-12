@@ -38,10 +38,7 @@ public class PasswordValidator {
             }
         }
 
-        boolean hasUpCase = false;
-        boolean hasLowCase = false;
-        boolean hasDigit = false;
-        boolean hasSpecial = false;
+        boolean hasUpCase = false, hasLowCase = false, hasDigit = false, hasSpecial = false;
         for (char symbol : password.toCharArray()) {
             if (Character.isUpperCase(symbol)) {
                 hasUpCase = true;
@@ -51,6 +48,9 @@ public class PasswordValidator {
                 hasDigit = true;
             } else if (!Character.isLetterOrDigit(symbol)) {
                 hasSpecial = true;
+            }
+            if (hasUpCase && hasLowCase && hasDigit && hasSpecial) {
+                break;
             }
         }
         validateBy(hasUpCase, "Password should contain at least one"
